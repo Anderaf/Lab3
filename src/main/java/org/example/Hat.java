@@ -1,18 +1,18 @@
 package org.example;
 
 public class Hat extends Accessory {
-    private Material material;
-    private float size;
+    private final Material material;
+    private final float size;
     public Hat(String name, String description, Material material, float size){
         super(name, description);
         this.material = material;
         this.size = size;
     }
 
-    public Material getMaterial() {
+    public final Material getMaterial() {
         return material;
     }
-    public float getSize(){
+    public final float getSize(){
         return size;
     }
     @Override

@@ -13,10 +13,10 @@ public abstract class Human implements IntSayer, IntWearer {
         accessories = new ArrayList<Accessory>();
         status = Status.Normal;
     }
-    public String getName(){
+    public final String getName(){
         return name;
     }
-    public int getAge(){
+    public final int getAge(){
         return age;
     }
     public void say(String text){

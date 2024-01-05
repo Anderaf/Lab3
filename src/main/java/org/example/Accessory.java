@@ -1,16 +1,16 @@
 package org.example;
 
 public abstract class Accessory {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     public Accessory(String name, String description){
         this.name = name;
         this.description = description;
     }
-    public String getName(){
+    public final String getName(){
         return name;
     }
-    public String getDescription(){
+    public final String getDescription(){
         return description;
     }
     @Override

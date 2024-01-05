@@ -1,12 +1,12 @@
 package org.example;
 
 public class Policeman extends Human {
-    private String policeId;
+    private final String policeId;
     public Policeman(String name, int age, String policeId){
         super(name, age);
         this.policeId = policeId;
     }
-    public String getPoliceId(){
+    public final String getPoliceId(){
         return policeId;
     }
     @Override

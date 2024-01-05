@@ -1,17 +1,17 @@
 package org.example;
 
 public class Gag extends Accessory{
-    private Material material;
-    private float effectiveness;
+    private final Material material;
+    private final float effectiveness;
     public Gag(String name, String description, Material material, float effectiveness){
         super(name, description);
         this.material = material;
         this.effectiveness = effectiveness;
     }
-    public Material getMaterial(){
+    public final Material getMaterial(){
         return material;
     }
-    public float getEffectiveness(){
+    public final float getEffectiveness(){
         return effectiveness;
     }
     @Override
