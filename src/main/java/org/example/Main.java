@@ -1,5 +1,7 @@
 package org.example;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         Policeman otherPoliceman = new Policeman("Другой полицейский", 27, "31fad43bc6");
@@ -37,6 +39,22 @@ public class Main {
         randomPoliceman1.say("Меня тоже тошнило от страха");
         randomPoliceman2.say("Я ощущал во всем теле необычайную легкость. Руки у меня и ноги как бы отнялись и ничего не весили, то есть я вовсе не замечал, что они у меня есть");
         System.out.println("Остальные полицейские тотчас же подтвердили, что и у них были такие же ощущения.");
+        System.out.println();
 
+        Tunnel tunnel = new Tunnel(10);
+        Child alice = new Child("Алиса", 14);
+        Rabbit rabbit = new Rabbit("Белый кролик", 4, Color.WHITE);
+        try {
+            tunnel.entrance1.Enter(rabbit);
+            tunnel.entrance2.Exit(rabbit);
+            tunnel.entrance1.Enter(alice);
+        }
+        catch (TunnelException e){
+            System.out.println("\u001B[31m" + e.getMessage() + "\u001B[37m");
+        }
+        //Tunnel tunnel2 = new Tunnel(14);
+        //Tunnel longestTunnel = Tunnel.TunnelCalculator.getLongerTunnel(tunnel, tunnel2);
+        //System.out.println(longestTunnel.getTunnelLength());
+        //System.out.println(tunnel.getIronMoleculesAmount());
     }
 }
