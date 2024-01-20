@@ -42,14 +42,17 @@ public class Main {
         System.out.println();
 
         Tunnel tunnel = new Tunnel(10);
-        Child alice = new Child("Алиса", 14);
         Rabbit rabbit = new Rabbit("Белый кролик", 4, Color.WHITE);
         try {
+            Child alice = new Child("Алиса", 14);
             tunnel.entrance1.Enter(rabbit);
             tunnel.entrance2.Exit(rabbit);
             tunnel.entrance1.Enter(alice);
         }
         catch (TunnelException e){
+            System.out.println("\u001B[31m" + e.getMessage() + "\u001B[37m");
+        }
+        catch (WrongAgeException e){
             System.out.println("\u001B[31m" + e.getMessage() + "\u001B[37m");
         }
         //Tunnel tunnel2 = new Tunnel(14);
